@@ -22,6 +22,12 @@
 
 <div class="container list">
     <?php foreach($content as $animal):?> 
+        <div class="items">
+                <img src="<?= $animal['image']?>"class="item--image"/>
+    <div class = "item--name"><?= $animal['name']?></div>
+    <div class ="item--color">cor:<?= $animal['color']?></div>
+    <div class="item--genre">genero:<?= $animal['genre']?></div>
+        </div>
     <?php endforeach;?>
 </div>
 <?php include "footer.php"?>
