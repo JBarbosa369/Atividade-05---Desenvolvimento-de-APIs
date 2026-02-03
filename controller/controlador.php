@@ -40,4 +40,18 @@ function peixespage(){
 
 
 };
+
+
+function pesquisapage(){
+    global $items;
+    $nome = $_GET['nome'];
+    $banner = "./images/allanimals.jpg";
+    $content = array_filter($items,function($animal)use($nome){
+        return $animal['nome'] == $nome;
+    });
+ 
+    
+    include "./include/layout.php";
+}
+
 ?>

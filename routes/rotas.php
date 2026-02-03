@@ -1,5 +1,5 @@
 <?php
-$URL = $_SERVER['REQUEST_URI'];
+$URL =  parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 echo $URL;
 include "./controller/controlador.php";
 if ($URL == "/site/"){
@@ -24,7 +24,9 @@ else if($URL == "/site/peixes"){
 else if($URL == "/site/pesquisa"){
     echo "Rotas de pesquisa";
     pesquisapage();
+
 }
+
 else{
     echo "NOT FOUND!!";
 }
