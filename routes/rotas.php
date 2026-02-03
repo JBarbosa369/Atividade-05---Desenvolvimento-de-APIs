@@ -2,25 +2,28 @@
 $URL = $_SERVER['REQUEST_URI'];
 echo $URL;
 include "./controller/controlador.php";
-if ($URL == "/atividade/"){
-    echo "Entrou no If";
+if ($URL == "/site/"){
     mainpage();
+    
 }
-else if($URL == "/atividade/gatos"){
-    echo "Rotas de gatos";
+else if($URL == "/site/gatos"){
+  
     gatospage();
+    
 }
-else if($URL == "/atividade/CaXorros"){
-    echo "Rotas de caXorros";
-    cachorrospaige();
+else if($URL == "/site/cachorros"){
+    echo "Rotas de Cachorros";
+    cachorrospage();
+  
 }
-else if($URL == "/atividade/peixes"){
+else if($URL == "/site/peixes"){
    echo "Rotas de peixes"; 
-   peixespaige();
+   peixespage();
+ 
 }
-else if($URL == "/atividadepesquisa"){
+else if($URL == "/site/pesquisa"){
     echo "Rotas de pesquisa";
-    pesquisapaige();
+    pesquisapage();
 }
 else{
     echo "NOT FOUND!!";

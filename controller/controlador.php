@@ -3,32 +3,41 @@ include "./data/animals.php";
 function mainpage(){
     global $items;
     $banner = "./images/allanimals.jpg";
+
     $title = "Todos os animais";
     $content = $items;
     include "./include/layout.php";
-}
+};
 
 function gatospage(){
-    $banner = "./imagens/allanimais.jpg";
+    global $items;
+    $banner = "./images/banner_cat.jpg";
+    $content = array_filter($items,function($animals){
+        return $animals['type'] == "gato";
+    });
     $title = "gatos";
-    $content = $items;
-
     include "./include/layout.php";
-}
+};
 
 function cachorrospage(){
-    $banner = "./imagens/allanimais.jpg";
+    global $items;
+    $banner = "./images/banner_dog.jpg";
+    $content = array_filter($items,function($animals){
+        return $animals['type'] == "cachorro";
+    });
     $title = "cachorros";
-    $content = $items;
-
     include "./include/layout.php";
-}
+};
 
 function peixespage(){
-    $banner = "./imagens/allanimais.jpg";
+    global $items;
+    $banner = "./images/banner_fish.jpg";
     $title = "peixes";
-    $content = $items;
-
+    $content = array_filter($items,function($animals){
+        return $animals['type'] == "peixe";
+    });
     include "./include/layout.php";
-}
+
+
+};
 ?>
