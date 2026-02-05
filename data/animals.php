@@ -118,6 +118,80 @@ $items = [
         'color' => 'preto',
         'genre' => 'masculino',
         'type'  => 'peixe'
-    ]
+    ],
+
+    [
+        'image' => 'images/raposa.png',
+        'name'  => 'acará bandeira',
+        'color' => 'preto',
+        'genre' => 'masculino',
+        'type'  => 'peixe'
+    ],
+
+    [
+        'image' => 'images/acara.jpg',
+        'name'  => 'acará bandeira',
+        'color' => 'preto',
+        'genre' => 'masculino',
+        'type'  => 'peixe'
+    ],
+
+    // Novos animais adicionados 
+    [
+        'image' => 'images/araraazul.png',
+        'name'  => 'arara azul',
+        'color' => 'azul',
+        'genre' => 'masculino',
+        'type'  => 'aves'
+    ],
+
+    [
+        'image' => 'images/ararajuba.png',
+        'name'  => 'arara juba',
+        'color' => 'amarelas',
+        'genre' => 'masculino',
+        'type'  => 'aves'
+    ],
+
+    [
+        'image' => 'images/capivara.png',
+        'name'  => 'capivara',
+        'color' => 'marrom',
+        'genre' => 'masculino',
+        'type'  => 'roedores'
+    ],
+
+        [
+        'image' => 'images/coruja.png',
+        'name'  => 'coruja',
+        'color' => 'marrom',
+        'genre' => 'masculino',
+        'type'  => 'aves'
+    ],
+
+        [
+        'image' => 'images/onçapintada.png',
+        'name'  => 'onça pintada',
+        'color' => 'pintada',
+        'genre' => 'femea',
+        'type'  => 'mamíferos'
+    ],
+
+        [
+        'image' => 'images/raposa.png',
+        'name'  => 'raposa',
+        'color' => 'laranja',
+        'genre' => 'masculino',
+        'type'  => 'mamiferos'
+    ],
+
+        [
+        'image' => 'images/tatubola.png',
+        'name'  => 'tatu bola',
+        'color' => 'marrom',
+        'genre' => 'masculino',
+        'type'  => 'mamiferos'
+    ],
+   
 ];
 ?>
