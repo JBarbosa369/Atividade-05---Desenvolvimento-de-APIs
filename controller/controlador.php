@@ -52,77 +52,85 @@ function pesquisapage(){
     
     include "./include/layout.php";
 };
-function avespage(){
+function avespage() {
     global $items;
-    $banner = "./images/banner_aves.jpg";
-    $title = "aves";
 
-    $content = array_filter($items, function($animal){
-        return $animal['type'] == 'aves';
+    $banner = "./images/banner_aves.png";
+    $title  = "aves";
+
+    $content = array_filter($items, function ($animal) {
+        return $animal['type'] === 'aves';
     });
 
     if (!empty($_GET['genre'])) {
-        $content = array_filter($content, function ($animal) {
-            return $animal['genre'] == $_GET['genre'];
+        $genre = $_GET['genre'];
+        $content = array_filter($content, function ($animal) use ($genre) {
+            return $animal['genre'] === $genre;
         });
     }
 
     if (!empty($_GET['color'])) {
-        $content = array_filter($content, function ($animal) {
-            return $animal['color'] == $_GET['color'];
+        $color = $_GET['color'];
+        $content = array_filter($content, function ($animal) use ($color) {
+            return $animal['color'] === $color;
         });
     }
 
     include "./include/layout.php";
-};
-
-
-function mamiferospage(){
-    global $items;
-    $banner = "./images/banner_mamiferos.jpg";
-    $title = "mamíferos";
-
-    $content = array_filter($items, function($animal){
-        return $animal['type'] == 'mamiferos';
-    });
-    if (!empty($_GET['genre'])) {
-    $content = array_filter($content, function ($animal) {
-        return $animal['genre'] == $_GET['genre'];
-    });
-};
-
-if (!empty($_GET['color'])) {
-    $content = array_filter($content, function ($animal) {
-        return $animal['color'] == $_GET['color'];
-    });
 }
 
+function mamiferospage() {
+    global $items;
+
+    $banner = "./images/banner_mamiferos.png";
+    $title  = "mamíferos";
+
+    $content = array_filter($items, function ($animal) {
+        return $animal['type'] === 'mamiferos';
+    });
+
+    if (!empty($_GET['genre'])) {
+        $genre = $_GET['genre'];
+        $content = array_filter($content, function ($animal) use ($genre) {
+            return $animal['genre'] === $genre;
+        });
+    }
+
+    if (!empty($_GET['color'])) {
+        $color = $_GET['color'];
+        $content = array_filter($content, function ($animal) use ($color) {
+            return $animal['color'] === $color;
+        });
+    }
 
     include "./include/layout.php";
-};
+}
 
-function roedorespage(){
+function roedorespage() {
     global $items;
-    $banner = "./images/banner_roedores.jpg";
-    $title = "roedores";
 
-    $content = array_filter($items, function($animal){
-        return $animal['type'] == 'roedores';
+    $banner = "./images/banner_roedores.png";
+    $title  = "roedores";
+
+    $content = array_filter($items, function ($animal) {
+        return $animal['type'] === 'roedores';
     });
+
     if (!empty($_GET['genre'])) {
-    $content = array_filter($content, function ($animal) {
-        return $animal['genre'] == $_GET['genre'];
-    });
-}
+        $genre = $_GET['genre'];
+        $content = array_filter($content, function ($animal) use ($genre) {
+            return $animal['genre'] === $genre;
+        });
+    }
 
-if (!empty($_GET['color'])) {
-    $content = array_filter($content, function ($animal) {
-        return $animal['color'] == $_GET['color'];
-    });
-}
-
+    if (!empty($_GET['color'])) {
+        $color = $_GET['color'];
+        $content = array_filter($content, function ($animal) use ($color) {
+            return $animal['color'] === $color;
+        });
+    }
 
     include "./include/layout.php";
-};
+}
 
 ?>
